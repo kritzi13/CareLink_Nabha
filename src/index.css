@@ -2,41 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Rural Healthcare Design System - Nabha Health Platform */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Healthcare Primary Colors */
+    --background: 210 40% 99%;
+    --foreground: 210 11% 15%;
 
+    /* Healthcare Green Theme */
+    --primary: 150 69% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 150 40% 88%;
+    --primary-glow: 150 69% 65%;
+
+    /* Healthcare Blue Accent */
+    --healthcare-blue: 210 100% 56%;
+    --healthcare-blue-light: 210 40% 94%;
+    --healthcare-blue-dark: 210 100% 40%;
+
+    /* Warm Accent Colors */
+    --warm-orange: 25 100% 65%;
+    --warm-red: 0 85% 60%;
+    --warm-yellow: 45 93% 58%;
+
+    /* Card and Surface Colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 11% 15%;
+    --card-hover: 150 20% 97%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Interactive Elements */
+    --secondary: 150 20% 95%;
+    --secondary-foreground: 150 69% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 210 11% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 94%;
+    --accent-foreground: 210 100% 40%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Status Colors */
+    --success: 150 69% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 45 93% 58%;
+    --warning-foreground: 45 30% 20%;
+    
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Form Elements */
+    --border: 210 20% 88%;
+    --input: 210 20% 94%;
+    --ring: 150 69% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-healthcare: linear-gradient(135deg, hsl(var(--healthcare-blue)), hsl(var(--primary)));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--warm-orange)), hsl(var(--warm-yellow)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--card-hover)));
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Shadows */
+    --shadow-healthcare: 0 10px 25px -5px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 4px 12px -2px hsl(210 11% 15% / 0.08);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
 
-    --radius: 0.5rem;
+    /* Border Radius */
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +88,44 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    /* Dark Mode Healthcare Colors */
+    --background: 210 15% 8%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 210 15% 10%;
     --card-foreground: 210 40% 98%;
+    --card-hover: 210 15% 12%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --primary: 150 60% 55%;
+    --primary-foreground: 210 15% 8%;
+    --primary-light: 150 30% 20%;
+    --primary-glow: 150 60% 65%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --healthcare-blue: 210 80% 65%;
+    --healthcare-blue-light: 210 30% 15%;
+    --healthcare-blue-dark: 210 80% 45%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 15% 15%;
+    --secondary-foreground: 150 40% 80%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 15% 12%;
+    --muted-foreground: 210 20% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 210 15% 15%;
+    --accent-foreground: 210 80% 65%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --success: 150 60% 55%;
+    --success-foreground: 210 15% 8%;
+    
+    --warning: 45 80% 65%;
+    --warning-foreground: 45 30% 10%;
+    
+    --destructive: 0 70% 65%;
+    --destructive-foreground: 210 15% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 210 15% 20%;
+    --input: 210 15% 15%;
+    --ring: 150 60% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +143,30 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Healthcare Button Variants */
+  .btn-healthcare {
+    @apply bg-gradient-primary text-primary-foreground shadow-healthcare hover:shadow-glow transition-all duration-300;
+  }
+  
+  .btn-consultation {
+    @apply bg-healthcare-blue text-white shadow-card hover:bg-healthcare-blue-dark transition-all duration-200;
+  }
+  
+  .btn-emergency {
+    @apply bg-warm-red text-white shadow-card hover:bg-destructive transition-all duration-200;
+  }
+  
+  /* Healthcare Cards */
+  .card-healthcare {
+    @apply bg-card border border-border rounded-lg shadow-card hover:shadow-healthcare transition-all duration-300 hover:bg-card-hover;
+  }
+  
+  .card-feature {
+    @apply card-healthcare p-6 cursor-pointer hover:scale-105 transform transition-all duration-300;
   }
 }
