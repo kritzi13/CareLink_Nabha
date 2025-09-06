@@ -80,8 +80,8 @@ const Index = () => {
               <Stethoscope className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">CareLink</h1>
-              <p className="text-xs text-muted-foreground">ਕੇਅਰਲਿੰਕ | केयरलिंक</p>
+              <h1 className="text-xl font-bold text-foreground">CureLink</h1>
+              <p className="text-xs text-muted-foreground">ਕਿਊਰਲਿੰਕ | क्यूरलिंक</p>
             </div>
           </div>
           <div className="flex items-center space-x-3">
@@ -117,7 +117,7 @@ const Index = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="btn-healthcare text-lg px-8 py-6" onClick={() => navigate("/register")}>
-                Join CareLink
+                Join CureLink
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 py-6" onClick={() => navigate("/consultation")}>
                 Find a Doctor
@@ -258,7 +258,7 @@ const Index = () => {
                 <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                   <Stethoscope className="w-5 h-5 text-white" />
                 </div>
-                <span className="font-bold text-lg">CareLink</span>
+                <span className="font-bold text-lg">CureLink</span>
               </div>
               <p className="text-muted-foreground">
                 Bringing quality healthcare to every village through technology and community support.
@@ -288,14 +288,14 @@ const Index = () => {
               <div className="space-y-2 text-muted-foreground">
                 <p>📞 Emergency: 108</p>
                 <p>💬 WhatsApp: +91-98765-43210</p>
-                <p>📧 help@carelink.com</p>
+                <p>📧 help@curelink.com</p>
                 <p>🏥 Local Hospital Partnerships</p>
               </div>
             </div>
           </div>
           
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 CareLink. Made with ❤️ for rural healthcare.</p>
+            <p>&copy; 2024 CureLink. Made with ❤️ for rural healthcare.</p>
           </div>
         </div>
       </footer>
