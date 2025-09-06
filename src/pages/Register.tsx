@@ -40,7 +40,7 @@ const Register = () => {
       // Final registration
       toast({
         title: "Registration Successful!",
-        description: "Welcome to Nabha Health. You can now access all our services.",
+        description: "Welcome to CareLink. You can now access all our services.",
       });
       navigate("/");
     }
@@ -61,7 +61,7 @@ const Register = () => {
             <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
               <Stethoscope className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold">Nabha Health</span>
+            <span className="font-bold">CareLink</span>
           </div>
         </div>
       </header>
